@@ -14,6 +14,7 @@ public class NameCheck {
 
         String status = "UNKNOWN";
 
+        label:
         for (int i = 0; i < fileimport.length; i++) {
 
             if (name == fileimport[i][2]) {
@@ -23,22 +24,24 @@ public class NameCheck {
                 break;
             } else if (name == fileimport[i][4]) {
 
-                if (fileimport[i][3].equals("FOUND")) {
+                switch (fileimport[i][3]) {
+                    case "FOUND":
 
-                    status = "ALIVE";
-                    seq = i;
-                    break;
+                        status = "ALIVE";
+                        seq = i;
+                        break label;
 
-                } else if (fileimport[i][3].equals("LOST")) {
+                    case "LOST":
 
-                    status = "DEAD";
-                    seq = i;
-                    break;
+                        status = "DEAD";
+                        seq = i;
+                        break label;
 
-                } else {
+                    default:
 
-                    System.out.println(status);
+                        System.out.println(status);
 
+                        break;
                 }
 
             }
