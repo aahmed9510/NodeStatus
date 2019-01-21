@@ -36,14 +36,14 @@ public class NodeStatus {
         ArrayList<String> names = new ArrayList<String>();
         ArrayList<String> names2 = new ArrayList<String>();
 
-        for (int i = 0; i < fileimport.length; i++) {
+        for (String[] aFileimport : fileimport) {
 
-            String x = fileimport[i][2];
+            String x = aFileimport[2];
             names.add(x);
 
-            if (fileimport[i][4] != null) {
+            if (aFileimport[4] != null) {
 
-                String y = fileimport[i][4];
+                String y = aFileimport[4];
                 names2.add(y);
             }
         }
