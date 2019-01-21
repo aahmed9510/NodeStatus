@@ -1,37 +1,41 @@
 import java.util.ArrayList;
 
+/**
+ * Array Builder generator for Array to ArrayList conversion
+ */
+
 public class ArrayBuilder {
 
-    static ArrayList<String> localMS_Al = new ArrayList<String>();
-    static ArrayList<String> localNode_Al = new ArrayList<String>();
-    static ArrayList<String> status_Al = new ArrayList<String>();
+    private static ArrayList<String> localMS_Al = new ArrayList<String>();
+    private ArrayList<String> localNode_Al = new ArrayList<String>();
+    private ArrayList<String> status_Al = new ArrayList<String>();
 
     public void StringArray(String[][] fileimport) {
 
         String localStatus_str = "";
 
         // get all the values to separate into 3 arrays/ columns
-        for (int i = 0; i < fileimport.length; i++) {
+        for (String[] aFileimport : fileimport) {
 
-            for (int j = 0; j < fileimport[i].length; j++) {
+            for (int j = 0; j < aFileimport.length; j++) {
 
                 if (j == 0) {
 
-                    String localMS_str = fileimport[i][j];
+                    String localMS_str = aFileimport[j];
                     localMS_Al.add(localMS_str);
                 }
 
                 if (j == 1) {
 
-                    String localNode_str = fileimport[i][j];
+                    String localNode_str = aFileimport[j];
                     localNode_Al.add(localNode_str);
                 }
 
                 if (j > 1) {
 
-                    if (fileimport[i][j] != null) {
+                    if (aFileimport[j] != null) {
 
-                        localStatus_str = localStatus_str + fileimport[i][j] + " ";
+                        localStatus_str = localStatus_str + aFileimport[j] + " ";
                     }
 
                 }

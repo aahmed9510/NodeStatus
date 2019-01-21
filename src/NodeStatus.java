@@ -73,10 +73,9 @@ public class NodeStatus {
 }
 
 // compares and sorts arrays
-
 /**
  * @author AlamMac Website:
- * http://techthinking.net/2010/02/sorting-two-dimensional-string-array-using-java/
+ *         http://techthinking.net/2010/02/sorting-two-dimensional-string-array-using-java/
  */
 @SuppressWarnings("rawtypes")
 class ColumnComparator implements Comparator {

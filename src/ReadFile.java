@@ -1,6 +1,10 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+/**
+ * Read File String Buffer into matrix
+ */
+
 public class ReadFile {
 
     @SuppressWarnings("resource")
